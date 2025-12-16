@@ -1,14 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Index";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
