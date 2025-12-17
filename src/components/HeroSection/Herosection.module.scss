@@ -1,0 +1,97 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.backgroundImage {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+.backgroundOverlay {
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+            ellipse at center,
+            rgba(0, 0, 0, 0.15) 0%,
+            rgba(0, 0, 0, 0.35) 60%,
+            rgba(0, 0, 0, 0.5) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            hsl(var(--background) / 0.2) 0%,
+            hsl(var(--background) / 0.85) 100%
+        );
+
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.title{
+    color: hsl(var(--gold));
+    font-size: 1rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    color: hsl(var(--white));
+    font-size: 4.25rem;
+    margin-bottom: 1rem;
+}
+
+.spanGradient {
+    color: hsl(var(--gold));
+}
+
+.paragraph {
+    color: hsl(var(--text));
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 1.2rem;
+}
+
+.heroButton {
+    margin-top: 1rem;
+}
+
+.scheduleButton, .header__cta {
+    background: var(--gradient-gold) !important;
+    color: hsl(var(--primary)) !important;
+    padding: 1rem 4rem;
+    margin: 0 1rem;
+    border-radius: .5rem;
+    border: none;
+    transition-duration: 300ms;
+    font-weight: 600 !important;
+    box-shadow: var(--shadow-gold);
+    z-index: 60;
+    cursor: pointer;
+}
+
+.knowButton {
+    background-color: transparent;
+    border: 1px solid hsl(var(--gold));
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    color: hsl(var(--gold));
+    font-weight: 600;
+    cursor: pointer;
+}

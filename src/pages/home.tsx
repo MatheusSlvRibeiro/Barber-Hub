@@ -1,9 +1,11 @@
-import Navbar from "../components/layout/Navbar";
+import Herosection from "@/components/HeroSection/Herosection";
+import Navbar from "@/components/layout/Navbar";
 
 const Home = () => {
     return (
         <div>
-           <Navbar /> 
+           <Navbar />
+           <Herosection /> 
         </div>
     );
 };

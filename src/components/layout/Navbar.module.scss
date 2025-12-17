@@ -28,6 +28,11 @@
 
 .header__logoIcon {
     margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover .header__logoIcon {
+    transform: rotate(45deg);
 }
 
 .header__nav {
@@ -50,6 +55,7 @@
 
 .header__mobileMenu {
     position: absolute;
+    z-index: 2;
     top: 100%;
     left: 0;
     right: 0;
@@ -81,26 +87,50 @@
     border-top: hsl(var(--border));
 }
 
-.header__mobileNav button {
+.header__NavButton {
     background-color: transparent;
     border: none;
     color: hsl(var(--text));
     font-weight: 500;
     font-size: 1rem;
-}
-
-.header__mobileNavButton {
     text-align: start;
 }
 
-.scheduleButton {
+.header__cta {
     background: var(--gradient-gold) !important;
     color: hsl(var(--primary)) !important;
     padding: 1rem 4rem;
     margin: 0 1rem;
     border-radius: .5rem;
+    border: none;
     transition-duration: 300ms;
     font-weight: 600 !important;
     box-shadow: var(--shadow-gold);
     z-index: 60;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .header__nav{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .header__cta{
+        display: flex;
+        padding: .8rem 2rem;
+    }
+
+    .header__menuIcon {
+        display: none;
+    }
+
+    .header__mobileMenu {
+        display: none;
+    }
+
+    .header__NavButton:hover{
+        color: hsl(var(--gold));
+        cursor: pointer;
+    }
 }

@@ -30,23 +30,33 @@ const Navbar: React.FC = () => {
 
                     {/* Desktop Navigation */}
                     <nav className={styles.header__nav}>
-                        <button onClick={() => scrollToSection("sobre")}>
+                        <button 
+                            className={styles.header__NavButton}
+                            onClick={() => scrollToSection("sobre")}>
                             Sobre
                         </button>
-                        <button onClick={() => scrollToSection("servicos")}>
+                        <button 
+                            className={styles.header__NavButton}
+                            onClick={() => scrollToSection("servicos")}>
                             Serviços
                         </button>
-                        <button onClick={() => scrollToSection("avaliacoes")}>
+                        <button 
+                            className={styles.header__NavButton}
+                            onClick={() => scrollToSection("avaliacoes")}>
                             Avaliações
                         </button>
-                        <button onClick={() => scrollToSection("localizacao")}>
+                        <button 
+                            className={styles.header__NavButton}
+                            onClick={() => scrollToSection("localizacao")}>
                             Localização
                         </button>
                     </nav>
 
                     {/* CTA */}
-                    <div className={styles.header__cta}>
-                        <button onClick={() => navigate("/agendar")}>
+                    <div >
+                        <button 
+                            className={styles.header__cta}
+                            onClick={() => navigate("/agendar")}>
                             Agendar Horário
                         </button>
                     </div>
@@ -64,23 +74,23 @@ const Navbar: React.FC = () => {
                     <div className={`${styles.header__mobileMenu} ${isMenuOpen ? styles.isOpen : ""}`}>
                         <nav className={styles.header__mobileNav}>
                             <button 
-                                className={styles.header__mobileNavButton}
+                                className={styles.header__NavButton}
                                 onClick={() => scrollToSection("sobre")}>
                                 Sobre
                             </button>
                             <button 
-                                className={styles.header__mobileNavButton}
+                                className={styles.header__NavButton}
                                 onClick={() => scrollToSection("servicos")}>
                                 Serviços
                             </button>
                             <button
-                                className={styles.header__mobileNavButton}
+                                className={styles.header__NavButton}
                                 onClick={() => scrollToSection("avaliacoes")}
                             >
                                 Avaliações
                             </button>
                             <button
-                                className={styles.header__mobileNavButton}
+                                className={styles.header__NavButton}
                                 onClick={() => scrollToSection("localizacao")}
                             >
                                 Localização
