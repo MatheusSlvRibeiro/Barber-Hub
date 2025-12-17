@@ -1,0 +1,106 @@
+.header__container {
+    position: relative;
+}
+
+.header__content {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: hsl(var(--background) / 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(var(--border));
+    transition: all 0.3s ease;
+}
+
+.header__logo  {
+    display: flex;
+    align-items: center;
+    color: hsl(var(--gold));
+}
+
+.header__logoIcon {
+    margin-right: 0.5rem;
+}
+
+.header__nav {
+    display: none;
+}
+
+.header__cta {
+    display: none;
+}
+
+.header__menuIcon {
+    display: block;
+    color: hsl(var(--white));
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.header__mobileMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    
+    background: hsl(var(--background) / 0.9);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid hsl(var(--border));
+    
+    transform: translateY(-10px);
+    opacity: 0;
+
+    transition: 
+        transform 0.3s ease,
+        opacity 0.25s ease;
+}
+
+.header__mobileMenu.isOpen {
+    transform: translatey(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header__mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1rem;
+    margin-top: 60px;
+    border-top: hsl(var(--border));
+}
+
+.header__mobileNav button {
+    background-color: transparent;
+    border: none;
+    color: hsl(var(--text));
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.header__mobileNavButton {
+    text-align: start;
+}
+
+.scheduleButton {
+    background: var(--gradient-gold) !important;
+    color: hsl(var(--primary)) !important;
+    padding: 1rem 4rem;
+    margin: 0 1rem;
+    border-radius: .5rem;
+    transition-duration: 300ms;
+    font-weight: 600 !important;
+    box-shadow: var(--shadow-gold);
+    z-index: 60;
+}

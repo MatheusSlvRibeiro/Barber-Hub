@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: 20, 14.3%, 4.1%;
+    --border: 20, 5.9%, 10%;
+    --primary: 20 14% 8%;
+
+    --gold: 42, 100%, 50%;
+    --white: 0, 0%, 100%;
+    --text: 30 10% 60%;
+
+    --shadow-gold: 0 4px 30px hsl(38 70% 50% / .15);
+    --gradient-gold:  linear-gradient(135deg, hsl(38 70% 50%), hsl(35 75% 40%));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--background));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
